@@ -25,7 +25,6 @@ body {
 }
 
 .item {
-    margin: 1.5rem auto;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: color .2s ease-out;
@@ -58,18 +57,18 @@ body {
 }
 
 .item-input:checked~.answer,
-.item-input:hover~.answer {
+.item:hover .answer {
     max-height: 100%;
     transform: scaleY(1);
 }
 
 .item-input:checked~.statement,
-.item-input:hover~.statement {
+.item:hover .statement {
     color: #000;
 }
 
 .item-input:checked~.statement .icon,
-.item-input:hover~.statement .icon {
+.item:hover .statement .icon {
     transform: rotate(45deg);
 }
 
@@ -78,6 +77,10 @@ body {
     overflow: hidden;
     transform: scaleY(0);
     transition: transform 0.26s ease;
+}
+
+.answer img:hover {
+    border: 0.3rem solid #ddd016;
 }
 
 @media screen and (max-width: 820px) {
